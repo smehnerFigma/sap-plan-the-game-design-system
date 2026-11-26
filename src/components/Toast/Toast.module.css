@@ -1,0 +1,20 @@
+.region {
+  position: fixed;
+  left: 50%;
+  bottom: 40px;
+  z-index: 20;
+  transform: translateX(-50%);
+}
+.toast {
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+  padding: 15px var(--space-s);
+  border: var(--border-s) solid var(--color-border-tile);
+  border-radius: var(--radius-m);
+  background: var(--color-surface-white);
+  box-shadow: var(--shadow-l);
+  animation: in 180ms ease-out;
+}
+.text { font: 400 14px/21px var(--font-family-brand); color: var(--color-text-core); white-space: nowrap; }
+@keyframes in { from { opacity: 0; transform: translateY(8px); } }

@@ -1,0 +1,27 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0;
+  border: var(--border-s) solid transparent;
+  background: transparent;
+  cursor: pointer;
+}
+.btn:disabled { opacity: var(--opacity-disabled); cursor: default; }
+.ghost { margin: -4px; padding: 4px; border: 0; border-radius: var(--radius-s); } /* hit area 24px, layout footprint = icon */
+.ghost:hover:not(:disabled) { background: var(--color-surface-grey-1); }
+.shell { width: 40px; height: 40px; border-radius: var(--radius-m); }
+.shell:hover:not(:disabled) { background: var(--color-surface-quaternary); }
+.shell.pressed { background: var(--color-brand-selected-bg); }
+.compact { width: 32px; height: 32px; border-radius: var(--radius-s); }
+.compact:hover:not(:disabled) { background: var(--color-surface-quaternary); }
+.compact.pressed { background: var(--color-brand-selected-bg); }
+.jouleOutline { width: 32px; height: 32px; border-color: var(--color-joule); border-radius: var(--radius-s); background: var(--color-surface-white); }
+.jouleOutline:hover:not(:disabled) { background: var(--color-joule-area); }
+.header { width: 36px; height: 36px; border-radius: var(--radius-m); }
+.header:hover:not(:disabled) { background: rgb(255 255 255 / 0.16); }
+.tertiary { width: 26px; height: 24px; padding: 5px 6px; border-radius: var(--radius-m); }
+.tertiary:hover:not(:disabled) { background: var(--color-surface-grey-1); }
+.joule { width: 32px; height: 32px; border-radius: var(--radius-m); background: var(--color-surface-secondary); }
+.joule:hover:not(:disabled) { background: var(--color-joule-area); }

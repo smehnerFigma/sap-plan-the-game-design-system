@@ -1,0 +1,49 @@
+/*
+ * SAP "72" typeface, shipped by @sap-theming/theming-base-content.
+ * Figma uses two families: "72" (Joule / Spaces screens) and "72 Brand" (SAC screens).
+ * "72 Brand" is not distributed in the npm package, so it is aliased to "72" (see README → Assumptions).
+ * Figma "Medium" (500) has no 72 cut; it resolves to Semibold via the 500–600 weight range.
+ */
+@font-face {
+  font-family: '72';
+  src: url('../assets/fonts/72-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: '72';
+  src: url('../assets/fonts/72-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: '72';
+  src: url('../assets/fonts/72-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: '72';
+  src: url('../assets/fonts/72-Semibold.woff2') format('woff2');
+  font-weight: 500 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: '72';
+  src: url('../assets/fonts/72-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/* Figma "Semibold Duplex" — used by SAP buttons so label width doesn't shift on bold states. */
+@font-face {
+  font-family: '72 Duplex';
+  src: url('../assets/fonts/72-SemiboldDuplex.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}

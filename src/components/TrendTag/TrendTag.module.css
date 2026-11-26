@@ -1,0 +1,14 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 18px;
+  min-height: 18px;
+  padding: 0 var(--space-3xs);
+  border: var(--border-s) solid;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  text-shadow: 0 0 2px white;
+}
+.positive { background: var(--color-positive-bg); border-color: var(--color-positive-bg); color: var(--color-positive); }
+.negative { background: var(--color-negative-bg); border-color: var(--color-negative-bg); color: var(--color-negative); }

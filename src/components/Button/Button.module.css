@@ -1,0 +1,48 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 6px;
+  border: var(--border-s) solid transparent;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+.btn:disabled { opacity: var(--opacity-disabled); cursor: default; }
+
+/* Family metrics */
+.horizon { font: 600 14px/20px var(--font-family); border-radius: var(--radius-s); }
+/* Figma strokes sit inside the box: subtract the 1px border from the padding to keep 32 / 36 / 25px heights. */
+.horizon.regular { min-height: 32px; padding: 5px 11px; }
+.horizon.compact { min-height: 26px; padding: 2px var(--space-2xs); border-radius: var(--radius-m); font: 600 14px/normal var(--font-family-duplex); }
+.sac { border-radius: var(--radius-m); }
+.sac.regular { min-height: 36px; padding: 8px 9px; font: 500 16px/18px var(--font-family-brand); }
+.sac.compact { min-height: 25px; padding: 4px 9px; gap: 4px; font: 500 14px/15px var(--font-family-brand); letter-spacing: -0.01em; } /* Semibold stands in for 72 Brand Medium: tighten to its width */
+
+/* Variants */
+.emphasized { background: var(--color-brand); border-color: var(--color-brand); color: var(--color-text-on-accent); }
+/* Horizon emphasized uses Brand/background #0070f2 ("Apply"); SAC uses Button/Regular/Primary #0057d2. */
+.horizon.emphasized { background: var(--color-brand-background); border-color: var(--color-brand-background); }
+.emphasized:hover:not(:disabled) { background: var(--color-brand-pressed); border-color: var(--color-brand-pressed); }
+
+.outline { background: var(--color-surface-white); border-color: var(--color-brand); color: var(--color-brand); }
+.outline:hover:not(:disabled) { background: var(--color-brand-selected-bg); }
+
+.secondary { background: var(--color-surface-white); border-color: var(--color-button-secondary-border); color: var(--color-brand-pressed); }
+.secondary:hover:not(:disabled) { background: var(--color-surface-grey-1); }
+
+.transparent { background: transparent; color: var(--color-brand); }
+.sac.transparent { color: var(--color-brand-pressed); }
+.transparent:hover:not(:disabled) { background: var(--color-brand-selected-bg); }
+
+.joule { background: var(--color-joule); border-color: var(--color-joule); color: var(--color-text-on-accent); }
+.joule:hover:not(:disabled) { background: var(--color-joule-hover); border-color: var(--color-joule-hover); }
+
+/* Toggle selected — Horizon: Brand/selected-background, no border, leading check. */
+.pressed,
+.pressed:hover:not(:disabled) {
+  background: var(--color-brand-selected-bg);
+  border-color: var(--color-brand-selected-bg);
+  color: var(--color-brand);
+}

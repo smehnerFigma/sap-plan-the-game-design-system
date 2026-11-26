@@ -1,0 +1,65 @@
+.wrap { display: flex; flex-direction: column; min-height: 0; color: var(--color-text-core); }
+.toolbar {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-s) var(--space-s) calc(var(--space-s) - var(--border-s)); /* 52px incl. stroke */
+  border-bottom: var(--border-s) solid var(--color-border-toolbar);
+  background: var(--color-surface-white);
+}
+.scroll { overflow-y: auto; overflow-x: auto; }
+.table {
+  width: 100%;
+  border-spacing: 0;
+  min-width: 1200px;
+  border-collapse: separate;
+  table-layout: fixed;
+}
+thead { position: sticky; top: 0; z-index: 1; background: var(--color-surface-white); }
+.corner { border-bottom: var(--border-s) solid var(--color-border-divider); }
+.th {
+  height: var(--size-table-row);
+  box-sizing: border-box;
+  padding: 0 var(--space-s);
+  border-bottom: var(--border-s) solid var(--color-border-divider);
+  background: var(--color-surface-white);
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.td {
+  height: var(--size-table-row);
+  box-sizing: border-box;
+  padding: 0 var(--space-s);
+  border-bottom: var(--border-s) solid var(--color-border-divider);
+  background: var(--color-surface-white);
+  white-space: nowrap;
+}
+.num { text-align: right; font-variant-numeric: tabular-nums; }
+.groupStart { border-left: var(--border-s) solid var(--color-border-divider); }
+/* Post-consolidation highlight — raw rgba(255,248,214,0.5) in Figma. */
+.th.highlight, .td.highlight { background: var(--color-pivot-highlight); }
+.label { font-weight: 400; text-align: left; }
+.child { padding-left: var(--space-xl); }
+.labelInner { display: flex; align-items: center; gap: var(--space-2xs); }
+.labelText { flex: 1 1 0; overflow: hidden; text-overflow: ellipsis; }
+.expand {
+  display: inline-flex;
+  margin: -4px 0;
+  padding: 5px 6px;
+  border: var(--border-s) solid transparent;
+  border-radius: var(--radius-m);
+  background: transparent;
+  cursor: pointer;
+}
+.expand:hover { background: var(--color-surface-grey-1); }
+.rotated { transform: rotate(-90deg); }
+.varianceCell { padding-block: 0; }
+
+.variance { display: flex; justify-content: center; align-items: center; }
+.half { display: flex; align-items: center; gap: 1px; width: 117px; height: 16px; }
+.half[data-side='neg'] { justify-content: flex-end; }
+.bar { display: block; height: 16px; }
+.bar[data-tone='neg'] { background: var(--color-variance-negative); }
+.bar[data-tone='pos'] { background: var(--color-variance-positive); }
+.vlabel { font: 400 13px/16px var(--font-family); color: #000; white-space: nowrap; padding: 0 2px; }

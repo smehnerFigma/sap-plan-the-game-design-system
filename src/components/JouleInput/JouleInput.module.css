@@ -1,0 +1,155 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.wide { max-width: 752px; }
+.compact { max-width: 560px; }
+
+/* "Input + Context Area": Joule area fill + 2px outside border-area stroke. */
+.frame {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-m);
+  background: var(--color-joule-area);
+  outline: var(--border-m) solid var(--color-border-area);
+}
+.context {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3xs) var(--space-3xs) var(--space-3xs) var(--space-xs);
+}
+.contextLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  min-width: 0;
+  color: var(--color-joule);
+}
+.ellipsis { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.contextRemove {
+  display: inline-flex;
+  padding: var(--space-2xs);
+  border: 0;
+  border-radius: var(--radius-s);
+  background: transparent;
+  cursor: pointer;
+}
+.contextRemove:hover { background: var(--color-accent-bg-5); }
+
+/* "Input": card surface, gradient stroke "Joule Input Gradient" (2px outside, 60% opacity) + effect "Joule Input".
+   Outside stroke emulated with a transparent 2px border and −2px margin; gradient painted on the border-box. */
+.input {
+  --ring-alpha: 0.6;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+  margin: -2px;
+  padding: var(--space-s);
+  border: var(--border-m) solid transparent;
+  border-radius: 10px;
+  background:
+    linear-gradient(var(--color-surface-card), var(--color-surface-card)) padding-box,
+    linear-gradient(120deg,
+      rgb(from var(--color-joule-input-blue) r g b / var(--ring-alpha)) 14.58%,
+      rgb(from var(--color-joule) r g b / var(--ring-alpha)) 100%) border-box;
+  box-shadow: var(--shadow-joule-input);
+}
+/* Focus is not drawn in Figma — inferred: full-opacity ring. */
+.input:focus-within { --ring-alpha: 1; }
+.compact .input { gap: var(--space-3xs); padding: var(--space-3xs); }
+
+.textarea {
+  width: 100%;
+  min-height: 22px;
+  padding: 0;
+  border: 0;
+  outline: none;
+  resize: none;
+  background: transparent;
+  color: var(--color-text-primary);
+  field-sizing: content;
+  max-height: 160px;
+}
+.textarea::placeholder { color: var(--color-text-tertiary); opacity: 1; }
+.compact .textarea { padding: var(--space-2xs) var(--space-2xs); }
+.compact .textarea::placeholder { font-style: italic; }
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.compact .actions { align-items: center; padding: var(--space-2xs); }
+.left { display: flex; align-items: center; gap: var(--space-2xs); }
+
+.squareBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-m);
+  background: var(--color-surface-secondary);
+  cursor: pointer;
+}
+.squareBtn:hover { background: var(--color-joule-area); }
+.squareBtn[aria-disabled='true'] { cursor: default; }
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  height: 32px;
+  padding: var(--space-3xs) var(--space-2xs);
+  border-radius: var(--radius-m);
+  background: var(--color-surface-secondary);
+  color: var(--color-joule-hover);
+  white-space: nowrap;
+}
+.tagRemove {
+  display: inline-flex;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.miniBtn {
+  display: inline-flex;
+  padding: 6px;
+  border: 0;
+  border-radius: var(--radius-s);
+  background: transparent;
+  cursor: pointer;
+}
+.miniBtn:hover { background: var(--color-joule-area); }
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  padding: var(--space-3xs) 6px;
+  border-radius: var(--radius-s);
+  background: var(--color-accent-bg-5);
+  color: var(--color-accent-5);
+}
+.sendFilled {
+  display: inline-flex;
+  padding: 6px;
+  border: 0;
+  border-radius: var(--radius-s);
+  background: var(--color-joule);
+  cursor: pointer;
+}
+.sendFilled:disabled { opacity: var(--opacity-disabled); cursor: default; }
+
+.notice {
+  padding: 0 var(--space-3xs) var(--space-s);
+  text-align: center;
+  color: var(--color-text-secondary);
+}

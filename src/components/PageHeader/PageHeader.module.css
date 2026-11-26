@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 40px 0 var(--space-s);
+}
+/* Subtitle variant is a plain frame in Figma: 24px below the pane bar, 40px above content. */
+.withSubtitle {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: var(--space-l) 0 20px;
+}
+.title { color: var(--color-text-primary); }
+.subtitle { color: var(--color-text-tertiary); }

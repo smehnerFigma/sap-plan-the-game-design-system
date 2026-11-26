@@ -1,0 +1,26 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  min-height: 88px;
+  margin: 0;
+  overflow-x: auto;
+}
+.kpi {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 88px;
+}
+.titles {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+  color: var(--color-text-heading);
+  white-space: nowrap;
+}
+.subline { color: var(--color-text-supporting); }
+.base { display: flex; align-items: flex-start; gap: var(--space-2xs); margin: 0; }
+.value { color: var(--color-text-core); white-space: nowrap; }
+.indicator { display: flex; flex-direction: column; padding-top: 7px; }
+.delta { color: var(--color-negative-text); white-space: nowrap; }

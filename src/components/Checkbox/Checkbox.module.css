@@ -1,0 +1,35 @@
+.root {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--space-2xs);
+  cursor: pointer;
+}
+.input {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: var(--border-s) solid var(--color-border-secondary);
+  border-radius: var(--radius-s);
+  background: var(--color-surface-card);
+}
+.check { visibility: hidden; }
+.input:checked + .box .check { visibility: visible; }
+.input:focus-visible + .box { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+.root:hover .box { border-color: var(--color-brand); }
+.label {
+  padding: 3px 0;
+  line-height: normal;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}

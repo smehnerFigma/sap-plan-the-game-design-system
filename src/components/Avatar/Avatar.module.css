@@ -1,0 +1,27 @@
+.avatar { flex-shrink: 0; }
+.person { border-radius: 50%; object-fit: cover; }
+.square {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Size L: card header — p12 with the 1px fill-colored stroke drawn inside (Figma) → 42px; radius 6 (raw). */
+.l {
+  max-width: 48px;
+  max-height: 48px;
+  padding: calc(var(--space-xs) - var(--border-s));
+  border: var(--border-s) solid transparent;
+  border-radius: var(--radius-avatar);
+}
+/* Size S: action item — p8, radius-s, max 32. */
+.s {
+  max-width: 32px;
+  max-height: 32px;
+  padding: var(--space-2xs);
+  border-radius: var(--radius-s);
+}
+.positive { background: var(--color-accent-bg-8); border-color: var(--color-accent-bg-8); }
+.warning { background: var(--color-warning-bg); border-color: var(--color-warning-bg); }
+.negative { background: var(--color-negative-bg); border-color: var(--color-negative-bg); }
+.info { background: var(--color-info-bg); border-color: var(--color-info-bg); }
+.neutral { background: var(--color-surface-white); }

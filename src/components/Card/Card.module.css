@@ -1,0 +1,51 @@
+/* Values from Figma "Card" / "_Card State" / "_Card Header". */
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--color-surface-card);
+  border: var(--border-s) solid var(--color-border-primary);
+  border-radius: var(--radius-m);
+}
+/* Figma draws the _Card State stroke inside the box: padding is measured from the outer edge. */
+.pad-l { padding: calc(var(--space-l) - var(--border-s)); }
+.pad-s { padding: calc(var(--space-s) - var(--border-s)); }
+.gap-s { gap: var(--space-s); }
+.gap-xs { gap: var(--space-xs); }
+.gap-l { gap: var(--space-l); }
+
+.selected { border-color: var(--color-brand); }
+.interactive { transition: box-shadow 120ms ease; }
+.interactive:hover { box-shadow: var(--shadow-s); }
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+  min-width: 0;
+}
+.titles {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  min-width: 0;
+}
+.title {
+  color: var(--color-text-primary);
+  overflow-wrap: anywhere;
+}
+.subtitle { color: var(--color-text-secondary); }
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  margin-left: auto;
+  align-self: flex-start;
+}
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--space-2xs);
+  margin-top: auto;
+}

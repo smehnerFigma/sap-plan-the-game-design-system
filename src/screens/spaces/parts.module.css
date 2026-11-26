@@ -1,0 +1,45 @@
+.secondary { color: var(--color-text-secondary); }
+.primary { color: var(--color-text-primary); }
+.core { color: var(--color-text-core); }
+.drivers { display: flex; flex-direction: column; gap: var(--space-2xs); }
+.driversLabel { display: inline-flex; align-items: center; gap: var(--space-2xs); color: var(--color-text-secondary); }
+.headerIcon { display: inline-flex; align-self: stretch; padding: var(--space-3xs) 0; }
+.kpiRow { display: flex; gap: var(--space-l); }
+.kpiRow > * { flex: 1 1 0; }
+.kpiWrap { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: var(--space-s); }
+.stretch { height: 100%; }
+.top { align-self: start; }
+/* Figma: Execution Risk fixed 694 wide, Recommended Actions fills (454 with right pane, 626 without). */
+.riskRow { display: grid; grid-template-columns: minmax(0, 694px) minmax(0, 1fr); gap: var(--space-l); align-items: stretch; }
+.halves { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-l); align-items: stretch; }
+.halvesTight { gap: var(--space-m); } /* follow-up screen: 20px between the two cards */
+.driverRow { display: flex; flex-wrap: wrap; align-items: flex-start; gap: var(--space-l); margin: 0; padding: 0; border: 0; }
+.driverLegend { float: left; margin-right: var(--space-l); padding: 0; font: 700 14px/22px var(--font-family); color: var(--color-text-secondary); }
+.chartPad { padding: 0 0 0 var(--space-l); margin-right: -1px; }
+.placeholder { padding: 120px 0; text-align: center; color: var(--color-text-tertiary); }
+.strategyPanel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+  padding: calc(var(--space-l) - var(--border-s)); /* stroke inside */
+  border: var(--border-s) solid var(--color-border-primary);
+  border-radius: var(--radius-m);
+  background: rgb(226 233 248 / 0.5); /* raw tint (Semantic/Info-bg @ 50%) */
+}
+.strategyGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-l); }
+.strategyKpi { display: flex; flex-direction: column; gap: var(--space-s); }
+.strategyKpi > :last-child { min-height: 41px; } /* Figma "Card KPI & Status" row */
+.summary { display: flex; flex-direction: column; gap: var(--space-3xs); }
+.summaryText { padding: var(--space-3xs) 0; }
+.risks { display: flex; flex-direction: column; gap: var(--space-3xs); }
+.riskList { display: flex; flex-direction: column; gap: var(--space-3xs); list-style: none; }
+.riskList li {
+  display: flex;
+  gap: var(--space-xs);
+  padding: var(--space-xs);
+  font: 500 16px/24px var(--font-family-brand); /* raw — 72 Brand Medium */
+  color: var(--color-text-core);
+}
+.riskList li img { margin-top: 3px; }
+.strategyTitle { padding-inline-start: 0.28em; } /* Figma text starts with a space */
+.buttonBar { display: flex; justify-content: flex-end; gap: var(--space-2xs); }

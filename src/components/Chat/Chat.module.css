@@ -1,0 +1,86 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+}
+.timestamp {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3xs);
+  color: var(--color-text-tertiary);
+  white-space: nowrap;
+}
+.userRow { display: flex; justify-content: flex-end; }
+.userBubble {
+  max-width: 600px;
+  padding: var(--space-2xs) var(--space-s);
+  border-radius: 16px 16px 2px 16px;
+  background: var(--color-brand-toggled-bg);
+  color: var(--color-text-primary);
+}
+.reply {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+  max-width: 600px;
+  color: var(--color-text-primary);
+}
+.replyList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+  padding-inline-start: 24px;
+}
+.replyList li { display: list-item; }
+.replyList li::marker { font: 600 16px/22px var(--font-family); }
+.replySub { margin-top: var(--space-3xs); }
+.actions { display: flex; align-items: center; gap: 2px; }
+.actionBtn {
+  display: inline-flex;
+  padding: var(--space-2xs);
+  border: 0;
+  border-radius: var(--radius-s);
+  background: transparent;
+  cursor: pointer;
+}
+.actionBtn:hover { background: var(--color-surface-quaternary); }
+.actionBtn[aria-pressed='true'] { background: var(--color-brand-selected-bg); }
+.sources {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3xs);
+  min-height: 26px;
+  padding: 5px var(--space-2xs);
+  border: 0;
+  border-radius: var(--radius-m);
+  background: transparent;
+  cursor: pointer;
+}
+.sources:hover { background: var(--color-surface-quaternary); }
+.sourcesText { font: 600 14px/normal var(--font-family-duplex); color: var(--color-text-tertiary); }
+.badge {
+  padding: 0 6px;
+  border-radius: var(--radius-full);
+  background: var(--color-accent-bg-5);
+  color: var(--color-accent-5);
+  text-align: center;
+}
+.steps { display: flex; flex-direction: column; gap: var(--space-2xs); list-style: none; }
+.step {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  color: var(--color-text-tertiary);
+}
+.stepLoading { color: var(--color-text-primary); }
+.stepIndicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: var(--space-3xs);
+}
+.busy { display: inline-flex; gap: 3.43px; }
+.busy img { animation: fade 1.2s ease-in-out infinite; }
+@keyframes fade { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }

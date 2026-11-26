@@ -1,0 +1,81 @@
+/* Charts/Data Labels · Charts/Axis Labels · Charts/Legend = 72 Regular 12. */
+.figure {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+}
+.plot { position: relative; width: 100%; }
+.plain .plot { overflow: hidden; }
+.svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.grid { stroke: var(--color-border-group); stroke-width: 1; }   /* #d9d9d9 raw in Figma */
+.baseline { stroke: var(--color-chart-9); stroke-width: 1; }     /* #798c77 raw */
+.overlay { position: absolute; inset: 0; pointer-events: none; }
+.tick {
+  position: absolute;
+  left: 0;
+  width: 42px;
+  transform: translateY(-50%);
+  text-align: right;
+  color: var(--color-text-tile);
+}
+.point { position: absolute; width: 0; height: 0; }
+.marker {
+  position: absolute;
+  left: -6px;
+  top: -6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+/* Diamond path M12 6L6 12L0 6L6 0Z → rotated square with 12px diagonal. */
+.diamond {
+  left: -4.25px;
+  top: -4.25px;
+  width: 8.5px;
+  height: 8.5px;
+  border-radius: 0;
+  transform: rotate(45deg);
+}
+.label {
+  position: absolute;
+  left: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  color: var(--color-chart-label);
+}
+.above { bottom: 7px; }
+.below { top: 7px; }
+.categoryAxis {
+  position: absolute;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  color: var(--color-text-field);
+}
+.axisLine {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: var(--color-chart-axis-line);
+}
+.categories {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  margin-top: var(--space-2xs);
+  text-align: center;
+  white-space: pre-line;
+  color: var(--color-chart-axis-label);
+}
+.categories span { padding: 0 var(--space-2xs); line-height: 1.2; }
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.axis .legend { gap: 5px; margin-top: var(--space-s); color: var(--color-text-core); }
+.plain .legend { justify-content: center; gap: var(--space-s); margin-top: var(--space-s); color: var(--color-chart-axis-label); }
+.legendItem { display: inline-flex; align-items: center; gap: var(--space-2xs); }
+.plain .legendItem { gap: var(--space-3xs); }

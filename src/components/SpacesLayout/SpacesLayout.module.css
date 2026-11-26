@@ -1,0 +1,79 @@
+.spaces {
+  display: flex;
+  height: 100vh;
+  min-height: 640px;
+  background: var(--color-surface-secondary); /* Shell/shell-bg-primary */
+  overflow: hidden;
+}
+.panes {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 1 1 0;
+  min-width: 0;
+}
+.contentPane {
+  position: relative;
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--color-surface-card); /* Brand/gradient-1 */
+  /* Left stroke drawn inside (Figma) so content starts exactly at the pane edge + padding. */
+  box-shadow: inset var(--border-s) 0 0 var(--color-border-primary), var(--shadow-pane);
+}
+.content {
+  flex: 1 1 0;
+  overflow-y: auto;
+  padding: 0 248px 180px;
+}
+/* Right pane open: padding 80, white content background (raw #fff in Figma). */
+.narrow {
+  padding-inline: 80px;
+  background: var(--color-surface-white);
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.prompt {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding: 0 var(--space-l);
+  pointer-events: none;
+}
+.prompt > * { pointer-events: auto; }
+.rightPane {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+  width: 508px;
+  background: var(--color-surface-secondary);
+  box-shadow: inset var(--border-s) 0 0 var(--color-border-primary);
+  overflow: hidden;
+}
+.messages {
+  flex: 1 1 0;
+  overflow-y: auto;
+  padding: 0 var(--space-l);
+}
+/* Fill style "Input Gradient 1" fades messages behind the input. */
+.rightInput {
+  position: relative;
+  padding: 0 var(--space-l);
+}
+.rightInput::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 164px;
+  background: linear-gradient(180deg, #f8f9fa33 0%, #f8f9facc 12%, #f8f9fa 24%);
+  z-index: -1;
+}

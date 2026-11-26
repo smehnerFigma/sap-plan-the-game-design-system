@@ -1,0 +1,19 @@
+.strip {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3xs);
+  width: 100%;
+  padding: var(--space-2xs);
+  border: var(--border-s) solid;
+  border-radius: var(--radius-s);
+}
+.warning {
+  background: var(--color-warning-bg);
+  border-color: var(--color-warning-border);
+}
+.icon { display: inline-flex; padding: var(--space-3xs); }
+.text {
+  flex: 1 1 0;
+  padding-top: 2px;
+  color: var(--color-text-primary);
+}

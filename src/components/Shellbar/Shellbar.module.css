@@ -1,0 +1,42 @@
+.bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  padding: 0 48px;
+  background: var(--color-surface-white);
+}
+.left { display: flex; align-items: center; gap: var(--space-s); }
+.titles {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  font: 300 24px/32px var(--font-family-brand);
+  color: #333; /* raw in Figma */
+  letter-spacing: var(--font-brand-tracking);
+  white-space: nowrap;
+}
+.showcase { font-weight: 700; }
+.joule {
+  display: inline-flex;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-m);
+  background: transparent;
+  cursor: pointer;
+}
+.addon {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+  padding: var(--space-l) 48px;
+}
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 36px;
+}
+.title { color: var(--color-text-heading); }
+.actions { display: flex; justify-content: flex-end; gap: var(--space-s); }
+.home { display: inline-flex; border-radius: var(--radius-s); }

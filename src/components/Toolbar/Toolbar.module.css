@@ -1,0 +1,10 @@
+.toolbar { display: flex; flex-wrap: wrap; align-items: center; }
+/* Figma: 22px row; 25px compact buttons overflow it symmetrically. */
+.fixed { height: 22px; flex-wrap: nowrap; }
+.l { gap: var(--space-xl); }
+.s { gap: 10px; }
+.start { justify-content: flex-start; }
+.center { justify-content: center; }
+.end { justify-content: flex-end; }
+.group { display: flex; align-items: center; gap: 10px; }
+.separator { flex-shrink: 0; }

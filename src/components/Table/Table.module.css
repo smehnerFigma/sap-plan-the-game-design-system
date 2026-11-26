@@ -1,0 +1,26 @@
+.wrap {
+  width: 100%;
+  overflow: hidden;
+  border: var(--border-s) solid var(--color-border-primary);
+  border-radius: var(--radius-m);
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.th, .td {
+  min-height: 32px;
+  padding: var(--space-xs) var(--space-2xs);
+  background: var(--color-surface-card);
+  text-align: left;
+  color: var(--color-text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+thead .th, thead .lead, thead .trail { border-bottom: var(--border-s) solid var(--color-border-primary); }
+tbody tr:not(:last-child) .td, tbody tr:not(:last-child) .lead { border-bottom: var(--border-s) solid var(--color-border-primary); }
+.lead { width: 8px; padding: 0; background: var(--color-surface-card); }
+.trail { width: 40px; padding: 0; }
+.th { padding-block: var(--space-xs); }

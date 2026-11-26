@@ -1,0 +1,160 @@
+/*
+ * Design tokens.
+ *
+ * Every value in the first block of each section is DEFINED IN FIGMA as a variable or style
+ * (source name in the trailing comment). Values under an "Inferred" heading are NOT Figma
+ * variables — they are raw values repeated across the screens and promoted to tokens here.
+ * See README.md → "Tokens: defined vs inferred".
+ */
+:root {
+  /* ───────── Color · Text ───────── */
+  --color-text-primary: #0b0c0f;          /* Text/text-primary */
+  --color-text-secondary: #353c4a;        /* Text/text-secondary */
+  --color-text-tertiary: #636d83;         /* Text/text-tertiary · Neutral/foreground-muted */
+  --color-text-accent: #0057d2;           /* Text/text-accent · Brand/foreground */
+  --color-text-on-accent: #ffffff;        /* Neutral/foreground-white */
+  --color-text-core: #223548;             /* Core/Text/Text (SAC) · Label/Primary Label */
+  --color-text-heading: #000000;          /* Core/Text/Heading (SAC) */
+  --color-text-supporting: #475e75;       /* Core/Text/SupportingText (SAC) */
+  --color-text-label: #8396a8;            /* Text/sapContent_LabelColor */
+  --color-text-tile: #556b82;             /* Tile/sapTile_TextColor */
+  --color-text-field: #131e29;            /* Input/Standard/sapField_TextColor · sapTextColor */
+  --color-text-placeholder: #556b82;      /* Input/Standard/sapField_PlaceholderTextColor */
+
+  /* ───────── Color · Surface ───────── */
+  --color-surface-card: #fdfeff;          /* Surface/card-bg-primary · Surface/canvas-primary */
+  --color-surface-white: #ffffff;         /* Neutral/background-white · Core/Surface/Neutral */
+  --color-surface-secondary: #f8f9fa;     /* Surface/background-secondary · Shell/shell-bg-primary */
+  --color-surface-quaternary: #e6e7ea;    /* Surface/background-quaternary */
+  --color-surface-grey-1: #f5f6f7;        /* Color/Grey/1 (SAC) */
+  --color-overlay: #00000066;             /* Color/Neutral/Black-40 (modal backdrop) */
+
+  /* ───────── Color · Border ───────── */
+  --color-border-primary: #e6e7ea;        /* Border/border-primary */
+  --color-border-secondary: #b5bcca;      /* Border/border-secondary */
+  --color-border-group: #d9d9d9;          /* sapGroup_ContentBorderColor · sapToolbar_SeparatorColor */
+  --color-border-divider: #d5dadd;        /* Core/DividerDefault · Table/{Header,Item}/Default/Border · Color/Grey/3 (SAC) */
+  --color-border-area: #b894ff;           /* Border/border-area (Joule) */
+  --color-border-toolbar: #a9b4be;        /* Table/Toolbar/Border (SAC) */
+  --color-border-tile: #eaecee;           /* Tiles/Border (SAC) */
+
+  /* ───────── Color · Brand / interaction ───────── */
+  --color-brand: #0057d2;                 /* Brand/foreground · Button/Regular/Primary/Default/Background */
+  --color-brand-background: #0070f2;      /* Brand/background · sapButton_Emphasized_Background */
+  --color-brand-pressed: #0040b0;         /* Brand/pressed-background · Button/Regular/Secondary/Default/Text */
+  --color-brand-selected-bg: #e5ecf5;     /* Brand/selected-background · Shell/shell-button-bg-selected */
+  --color-brand-toggled-bg: #d6e1f0;      /* Brand/toggled-background */
+  --color-button-lite-text: #0064d9;      /* sapButton_Lite_TextColor */
+  --color-button-selected-bg: #edf6ff;    /* sapButton_Selected_Background */
+  --color-button-selected-border: #0064d9;/* sapButton_Selected_BorderColor */
+  --color-button-secondary-border: #475e75; /* Button/Regular/Secondary/Default/Border (SAC) */
+  --color-field-active-border: #0064d8;   /* sapField_Active_BorderColor */
+  --color-focus: #0064d9;                 /* Inferred: SAP focus outline (sapContent_FocusColor) */
+  --color-list-selected-bg: #ebf8ff;      /* List/Selected/Background (SAC) */
+  --color-scrollbar-thumb: #8396a8;       /* Scrollbar/ThumbDefault · Color/Grey/5 */
+  --color-pivot-highlight: rgb(255 248 214 / 0.5); /* Inferred: raw Group-column highlight */
+  --color-variance-negative: #e00000;     /* Inferred: raw bar fill */
+  --color-variance-positive: #118843;     /* Inferred: raw bar fill */
+
+  /* ───────── Color · Semantic ───────── */
+  --color-positive: #007b3e;              /* Semantic/positive */
+  --color-positive-bg: #dfefe6;           /* Semantic/positive-bg */
+  --color-negative: #c72f2b;              /* Semantic/negative */
+  --color-negative-bg: #f6e6e7;           /* Semantic/negative-bg */
+  --color-negative-text: #aa0808;         /* sapNegativeTextColor · Semantic Negative */
+  --color-warning: #a95a00;               /* Semantic/warning */
+  --color-warning-bg: #fef5c8;            /* Semantic/warning-bg */
+  --color-warning-border: #a95a004d;      /* Semantic/warning-border */
+  --color-info: #0064d9;                  /* Semantic/info */
+  --color-info-bg: #e2e9f8;               /* Semantic/Info-bg */
+
+  /* ───────── Color · Accent ───────── */
+  --color-accent-5: #552cff;              /* Accent/accent-5 */
+  --color-accent-bg-5: #ded3ff;           /* Accent/accent-bg-5 */
+  --color-accent-8: #256f3a;              /* Accent/accent-8 */
+  --color-accent-bg-8: #ebf5cb;           /* Accent/accent-bg-8 */
+  --color-red-6: #ee3939;                 /* Color/Red/6 */
+  --color-raspberry-8: #ba066c;           /* Color/Raspberry/8 */
+  --color-blue-6: #1b90ff;                /* Color/Blue/6 */
+
+  /* ───────── Color · Joule ───────── */
+  --color-joule: #5d36ff;                 /* Joule/background · Colors/Specific/Brand-Purple */
+  --color-joule-hover: #470ced;           /* Joule/hover-background */
+  --color-joule-area: #f1ecff;            /* Joule/background-area */
+  --color-joule-gradient-1: #ba79ef;      /* Joule/gradient-color-1 */
+  --color-joule-gradient-2: #8a48e6;      /* Joule/gradient-color-2 */
+  --color-joule-gradient-3: #470ced;      /* Joule/gradient-color-3 */
+  --color-joule-gradient-4: #2c13ad;      /* Joule/gradient-color-4 */
+  --color-joule-input-blue: #4295ff;      /* Colors/Specific/Joule-Input-Gradient-Blue */
+  --color-joule-question-bg: #eae5ff;     /* sapAssistant_Question_Background */
+  --color-joule-answer-bg: #eff1f2;       /* sapAssistant_Answer_Background */
+  --color-joule-answer-text: #1d2d3e;     /* sapAssistant_Answer_TextColor */
+  --color-joule-accent-4: #a100c2;        /* Joule Accent 4 - Morning Horizon */
+
+  /* ───────── Color · Charts ───────── */
+  --color-chart-1: #168eff;               /* sapChart_OrderedColor_1 (Plan) */
+  --color-chart-2: #c87b00;               /* sapChart_OrderedColor_2 (Actual) */
+  --color-chart-5: #8b47d7;               /* sapChart_OrderedColor_5 (Forecast) */
+  --color-chart-9: #798c77;               /* sapChart_OrderedColor_9 */
+  --color-chart-label: #000000;           /* Widget Content/Chart/Value & Data Labels */
+  --color-chart-axis-line: #758ca4;       /* Widget Content/Chart/Axis Line */
+  --color-chart-axis-label: #1d2d3e;      /* Widget Content/Chart/Axis Labels · Legend */
+
+  /* ───────── Spacing ───────── */
+  --space-null: 0;                        /* Spacing/spacing-null */
+  --space-4xs: 2px;                       /* Spacing/spacing-4xs · Spacer/2 */
+  --space-3xs: 4px;                       /* Spacing/spacing-3xs · 2XS */
+  --space-2xs: 8px;                       /* Spacing/spacing-2xs · Container/Spacing/Tiny */
+  --space-xs: 12px;                       /* Spacing/spacing-xs · Spacer/12 */
+  --space-s: 16px;                        /* Spacing/spacing-s · Spacer/16 */
+  --space-l: 24px;                        /* Spacing/spacing-l */
+  /* Inferred (raw values repeated in layouts, no variable): */
+  --space-m: 20px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  /* ───────── Radius ───────── */
+  --radius-s: 4px;                        /* Radius/radius-s · sapField_BorderCornerRadius · Input/ContainerRadius */
+  --radius-m: 8px;                        /* Radius/radius-m · sapButton_BorderCornerRadius · Button/Radius */
+  --radius-avatar: 6px;                   /* Inferred: raw 6px on square Avatar */
+  --radius-pill: 16px;                    /* Inferred: Card Tag */
+  --radius-full: 9999px;                  /* "Full" = 100 */
+
+  /* ───────── Border width ───────── */
+  --border-s: 1px;                        /* Borderwidth/border-width-s · sapButton_BorderWidth */
+  --border-m: 2px;                        /* Borderwidth/border-width-m */
+
+  /* ───────── Sizing ───────── */
+  --size-element: 36px;                   /* sapElement_Height */
+  --size-element-compact: 26px;           /* sapElement_Compact_Height */
+  --size-table-row: 42px;                 /* Table/Cell/Size/ContainerHeightM */
+  --size-icon-s: 14px;                    /* Button/Size/Icon/S */
+  --size-icon-m: 18px;                    /* List/Icon/Size/M · Core/Size/Icon/Input */
+  --size-scrollbar: 12px;                 /* Scrollbar/Size/Track */
+  --opacity-disabled: 0.4;                /* Opacity/disabled-opacity · sapContent_DisabledOpacity */
+
+  /* ───────── Elevation ───────── */
+  --shadow-joule-input:                   /* Effect "Joule Input" */
+    0 4px 3px -10px #0a0a0a08, 0 4px 3px -10px #0a0a0a0a, 0 8px 8px 0 #0000000d,
+    0 24px 16px 0 #0000000d, 0 8px 24px 0 #7858ff29, 0 0 4px 0 #7858ff33;
+  --shadow-pane: 0 182px 111px 0 #0000000d, 0 22px 14px 0 #0000000f; /* Effect "Pane Shadow" */
+  --shadow-s: 0 2px 4px 0 #22364933;      /* Effect "Shadow/S" (SAC) */
+  --shadow-l: 0 10px 30px 0 #22364940;    /* Effect "Shadow/L" (SAC toast) */
+  --shadow-xl: 0 20px 80px 0 #22364940;   /* Effect "Shadow/XL" (SAC) */
+  --shadow-blue-s: 0 4px 8px 0 #1b90ff29, 0 0 2px 0 #1b90ff29;   /* Effect "CxD/Blue/S" */
+  --shadow-grey-xl: 0 32px 64px 0 #5b738b29, 0 0 2px 0 #5b738b29; /* Effect "CxD/Grey/XL" */
+
+  /* ───────── Typography ───────── */
+  --font-family: '72', '72full', Arial, Helvetica, sans-serif;       /* Font/Family/sapFontFamily */
+  --font-family-brand: '72', '72full', Arial, Helvetica, sans-serif; /* "72 Brand" → aliased to 72 */
+  /* Inferred: "72" Regular/Light ≥24px renders ~1.75% wider than "72 Brand" (measured on the SAC frames). */
+  --font-brand-tracking: -0.0175em;
+  --font-family-duplex: '72 Duplex', '72', Arial, sans-serif;        /* Button/Standard/sapButton_FontFamily */
+  --font-size-small: 12px;                /* Font/Size/sapFontSmallSize */
+  --font-size-medium: 14px;               /* Font/Size/sapFontSize */
+  --font-size-large: 16px;
+  --line-height-medium-text: 21px;        /* sapContent_LineHeight_MediumText */
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}

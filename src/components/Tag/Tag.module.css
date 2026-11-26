@@ -1,0 +1,16 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 6px;
+  padding: var(--space-3xs) var(--space-2xs);
+  border-radius: var(--radius-s);
+  white-space: nowrap;
+}
+.neutral { background: var(--color-surface-quaternary); color: var(--color-text-secondary); }
+/* "Completed" uses Accent-8 tokens in Figma (not Semantic/positive). */
+.positive { background: var(--color-accent-bg-8); color: var(--color-accent-8); }
+.negative { background: var(--color-negative-bg); color: var(--color-negative); }
+.info { background: var(--color-info-bg); color: var(--color-info); }
+/* Inferred variant — "Immediate action needed" on Skill Gap screen. */
+.warning { background: var(--color-warning-bg); color: var(--color-warning); }
