@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "figma:check": "tsc -p tsconfig.figma.json",
+    "figma:publish": "figma connect publish"
   },
   "dependencies": {
     "@sap-theming/theming-base-content": "^11.36.5",
@@ -15,6 +17,7 @@
     "react-dom": "^19.3.1"
   },
   "devDependencies": {
+    "@figma/code-connect": "^2.1.1",
     "@types/node": "^26.6.6",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
